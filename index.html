@@ -1,0 +1,20 @@
+---
+layout: default
+title: MIXDOC
+---
+
+{% if site.categories and site.categories.size > 0 %}
+    {% assign sorted_categories = site.categories | sort: self[0] %}
+    {% for category in sorted_categories %}
+        {% assign posts = category[1] %}
+        {% if posts and posts.size > 0 %}
+<h2><i class="fa fa-angle-double-right"></i> {{ category[0] }}</h2>
+            {% assign sorted_posts = posts | sort: "date" | reverse %}
+<ul class="category-list">
+            {% for post in sorted_posts %}
+<li class="category-item"><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+    {% endfor %}
+{% endif %}

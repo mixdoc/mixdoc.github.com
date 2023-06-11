@@ -1,0 +1,323 @@
+---
+---
+
+// Headers
+$header-heading-color: #fff !default;
+$header-bg-color: #24292e !default;
+$header-bg-color-secondary: #24292e !default;
+
+// Text
+$section-headings-color: #f05a23 !default;
+$body-text-color: #171717 !default;
+$body-link-color: #171717 !default;
+$blockquote-text-color: #646464 !default;
+
+// Code
+$code-bg-color: #282c34 !default;
+$code-text-color: #CCCCCC !default;
+
+// Borders
+$border-color: #eff0f1 !default;
+$hr-border-color: #eff0f1 !default;
+
+$table-bg-color: #e9e9e9 !default;
+$table-border-color: #e2e2e2 !default;
+
+$copyinfo-bg-color: #FAFAFA !default;
+
+@import "{{ site.theme }}";
+@import "rouge-github-mixdoc.scss";
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  overflow-x: hidden;
+}
+
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.page-header {
+  
+  text-align: left;
+
+  @include large {
+    padding: 0;
+  }
+
+  @include medium {
+    padding: 0;
+  }
+
+  @include small {
+    padding: 0;
+  }
+}
+
+.project-name {
+  letter-spacing: 0.1em;
+
+  @include large {
+    font-size: 2.25rem;
+  }
+
+  @include medium {
+    font-size: 1.75rem;
+  }
+
+  @include small {
+    font-size: 1rem;
+  }
+}
+
+.header-content {
+  @include large {
+    max-width: 64rem;
+    padding: 3rem 6rem;
+    margin: 0 auto;
+  }
+
+  @include medium {
+    padding: 2rem 4rem;
+  }
+
+  @include small {
+    padding: 2rem 1rem;
+  }
+}
+
+.main-content {
+  letter-spacing: 0.05em;
+
+  pre {
+    font: 0.9rem Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+    border: none;
+  }
+  
+  code {
+    font: 0.9rem Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  }
+
+  @include large {
+    font-size: 1rem;
+  }
+
+  @include medium {
+    font-size: 0.9rem;
+  }
+
+  @include small {
+    font-size: 0.9rem;
+  }
+
+  nav {
+
+    @include large {
+      font-size: 0.9rem;
+    }
+  
+    @include medium {
+      font-size: 0.8rem;
+    }
+  
+    @include small {
+      font-size: 0.8rem;
+    }
+    
+    p {
+      text-indent: 1em;
+      color: $blockquote-text-color;
+    }
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    font-size: 1em;
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+
+  li {
+    line-height: 2em;
+    
+    p {
+      text-indent: 0em;
+    }
+  }
+
+  table {
+    display: table;
+    word-break: break-all;
+
+    th {
+      background: $table-bg-color;
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  ul {
+    margin-bottom: 1em;
+  }
+
+  ol {
+    margin-bottom: 1em;
+  }
+
+  .category-text {
+    height: 2em;
+    line-height: 2em;
+    text-align: left;
+    vertical-align: middle;
+    font-size: 0.7em;
+    display: inline-block;
+  }
+
+  .copyinfo {
+    padding: 1em;
+    margin-top: 1em;
+    border: solid 1px $border-color;
+    background-color: $copyinfo-bg-color;
+    color: $blockquote-text-color;
+    word-break: break-all;
+    
+    @include large {
+      font-size: 0.8rem;
+    }
+  
+    @include medium {
+      font-size: 0.8rem;
+    }
+  
+    @include small {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.site-footer {
+  color: $blockquote-text-color;
+
+  @include large {
+    font-size: 0.9rem;
+  }
+
+  @include medium {
+    font-size: 0.8rem;
+  }
+
+  @include small {
+    font-size: 0.8rem;
+  }
+
+  a {
+    color: $blockquote-text-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-end: 0;
+    margin-block-start: 0;
+
+    li {
+      display: inline-block;
+      line-height: 2em;
+      padding-right: 2em;
+    }
+  }
+}
+
+.side-btn {
+  z-index: 2;
+  position: fixed;
+  _position: absolute;
+  bottom: 5%;
+  right: 1.5em;
+  width: 1.5em;
+
+  .icon-item {
+    width: 1.5em;
+    height: 1.5em;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: #444;
+    background-color: rgba(0,0,0,.4);
+    color: #fff;
+    line-height: 1.5em;
+    font-size: 1.5em;
+    text-align: center;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:active {
+      background-color: rgba(0,0,0,.75)
+    }
+
+    &:hover {
+      background-color: rgba(0,0,0,.75)
+    }
+  }
+
+  .icon-go-top {
+    &:before {
+      content: "\f077";
+    }
+  }
+
+  .icon-go-index {
+    &:before {
+      content: "\f015";
+    }
+  }
+
+  .icon-go-bottom {
+    &:before {
+      content: "\f078";
+    }
+  }
+
+  .icon-refresh {
+    &:before {
+      content: "\f021";
+    }
+  }
+}
+
+.category-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.category-item {
+  display: inline-block;
+  width: 25em;
+  padding: 0 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
